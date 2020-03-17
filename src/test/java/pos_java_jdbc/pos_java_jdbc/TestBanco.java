@@ -17,8 +17,8 @@ public class TestBanco {
 
 		Userposjava userposjava = new Userposjava();
 
-		userposjava.setNome("Paulo");
-		userposjava.setEmail("paulo@hotmail.com");
+		userposjava.setNome("Jose");
+		userposjava.setEmail("jose@hotmail.com");
 		dao.salvar(userposjava);
 	}
 
@@ -38,7 +38,7 @@ public class TestBanco {
 
 		UserPosDao dao = new UserPosDao();
 
-		Userposjava userposjava = dao.buscaPorId(3L);
+		Userposjava userposjava = dao.buscaPorId(8L);
 
 		System.out.println(userposjava);
 	}
@@ -48,8 +48,8 @@ public class TestBanco {
 
 		UserPosDao dao = new UserPosDao();
 
-		Userposjava userposjava = dao.buscaPorId(7L);
-		userposjava.setEmail("Jose");
+		Userposjava userposjava = dao.buscaPorId(8L);
+		userposjava.setNome("Paulo Santos");
 		dao.atualizar(userposjava);
 
 	}
@@ -59,7 +59,7 @@ public class TestBanco {
 
 		UserPosDao dao = new UserPosDao();
 
-		dao.deletar(5L);
+		dao.deletar(9L);
 	}
 
 	@Test
